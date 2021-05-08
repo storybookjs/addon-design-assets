@@ -11,32 +11,54 @@ npm install @storybook/addon-design-assets
 ```
 
 ## Usage
+
 within `.storybook/main.js`:
 
 ```js
 module.exports = {
-  addons: ['@storybook/addon-design-assets']
-}
+  addons: ["@storybook/addon-design-assets"],
+};
 ```
 
 within your stories:
-```js
-import React from 'react';
 
-import imageUrl from './images/my-image.jpg'; 
+```js
+import React from "react";
+
+import imageUrl from "./images/my-image.jpg";
 
 export default {
-  title: 'Design Assets',
+  title: "Design Assets",
   parameters: {
     assets: [
       imageUrl, // link to a file imported
-      'https://via.placeholder.com/300/09f/fff.png', // link to an external image
-      'https://www.example.com', // link to a webpage
-      'https://www.example.com?id={id}', // link to a webpage with the current story's id in the url
+      "https://via.placeholder.com/300/09f/fff.png", // link to an external image
+      "https://www.example.com", // link to a webpage
+      "https://www.example.com?id={id}", // link to a webpage with the current story's id in the url
     ],
   },
 };
 
-export const defaultView = () => (
-  <div>your story here</div>
-);
+export const defaultView = () => <div>your story here</div>;
+```
+
+## Credits
+
+While this addon was part of the [Storybook monorepo](https://github.com/storybookjs/storybook), it received commits from the following authors:
+
+> Andrew Lisowski,
+> Brody McKee,
+> Clément DUNGLER,
+> Gaëtan Maisse,
+> Jimmy Somsanith,
+> Jon Palmer,
+> Joris W,
+> Lynn Chyi,
+> Michael Shilman,
+> Michaël De Boey,
+> Norbert de Langen,
+> Paul Rosania,
+> Renovate Bot,
+> Robert Lange,
+> Simen Bekkhus,
+> Varun Vachhar
